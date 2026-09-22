@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>BookTrack — Your personal reading space</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="#" class="logo">BookTrack</a>
+
+        <nav class="nav">
+          <a href="#library">Library</a>
+          <a href="#reading">Reading</a>
+          <a href="#stats">Statistics</a>
+        </nav>
+
+        <div class="header__actions">
+          <a href="#" class="link">Log in</a>
+
+          <a href="#" class="button button--dark"> Start reading </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero__grid">
+          <div class="hero__content">
+            <p class="eyebrow">Your personal reading space</p>
+
+            <h1>
+              Your books.<br />
+              Your story.
+            </h1>
+
+            <p class="hero__description">
+              Track what you read, remember what you loved, and build a library
+              that reflects you.
+            </p>
+
+            <div class="hero__actions">
+              <a href="#" class="button button--dark"> Start your library </a>
+
+              <a href="#library" class="button button--light">
+                Explore the app
+              </a>
+            </div>
+          </div>
+
+          <!-- PRODUCT PREVIEW -->
+          <div class="hero__visual">
+            <div class="hero-book">
+              <div class="hero-book__cover">
+                <span class="hero-book__cover-small"> The </span>
+
+                <strong>
+                  Midnight<br />
+                  Library
+                </strong>
+
+                <span class="hero-book__cover-author"> Matt Haig </span>
+              </div>
+
+              <div class="hero-book__info">
+                <span class="hero-book__label"> Currently reading </span>
+
+                <h2>The Midnight Library</h2>
+
+                <p class="hero-book__author">Matt Haig</p>
+
+                <div class="hero-book__progress-info">
+                  <span>218 / 320 pages</span>
+                  <strong>68%</strong>
+                </div>
+
+                <div class="hero-book__progress">
+                  <div class="hero-book__progress-value"></div>
+                </div>
+
+                <button class="hero-book__button" type="button">
+                  Update progress
+                </button>
+              </div>
+            </div>
+
+            <div class="hero-goal">
+              <div>
+                <span class="hero-goal__label"> Reading goal </span>
+
+                <p>
+                  <strong>12</strong>
+                  of 20 books
+                </p>
+              </div>
+
+              <div class="hero-goal__percent">60%</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LIBRARY -->
+      <section class="library" id="library">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Your library</p>
+
+            <h2>Everything you read, in one place.</h2>
+          </div>
+
+          <div class="book-grid">
+            <article class="book">
+              <div class="book__cover book__cover--midnight">
+                <div class="book__cover-content">
+                  <span>The</span>
+
+                  <strong>
+                    Midnight<br />
+                    Library
+                  </strong>
+                </div>
+              </div>
+
+              <span class="book__status"> Reading · 68% </span>
+
+              <h3>The Midnight Library</h3>
+
+              <p>Matt Haig</p>
+            </article>
+
+            <article class="book">
+              <div class="book__cover book__cover--atomic">
+                <div class="book__cover-content">
+                  <span>Atomic</span>
+
+                  <strong> Habits </strong>
+                </div>
+              </div>
+
+              <span class="book__status"> Finished </span>
+
+              <h3>Atomic Habits</h3>
+
+              <p>James Clear</p>
+            </article>
+
+            <article class="book">
+              <div class="book__cover book__cover--dune">
+                <div class="book__cover-content">
+                  <strong> Dune </strong>
+                </div>
+              </div>
+
+              <span class="book__status"> Want to read </span>
+
+              <h3>Dune</h3>
+
+              <p>Frank Herbert</p>
+            </article>
+
+            <article class="book">
+              <div class="book__cover book__cover--fourth">
+                <div class="book__cover-content">
+                  <span>Fourth</span>
+
+                  <strong> Wing </strong>
+                </div>
+              </div>
+
+              <span class="book__status"> Want to read </span>
+
+              <h3>Fourth Wing</h3>
+
+              <p>Rebecca Yarros</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CURRENTLY READING -->
+      <section class="reading" id="reading">
+        <div class="container reading__grid">
+          <div class="reading__visual">
+            <div class="reading-book">
+              <span class="reading-book__small"> The </span>
+
+              <strong>
+                Midnight<br />
+                Library
+              </strong>
+
+              <span class="reading-book__author"> Matt Haig </span>
+            </div>
+          </div>
+
+          <div class="reading__content">
+            <p class="eyebrow">Currently reading</p>
+
+            <h2>Stay connected to your reading.</h2>
+
+            <p>
+              Update your progress, keep track of pages, and see how close you
+              are to finishing.
+            </p>
+
+            <div class="progress">
+              <div class="progress__top">
+                <span> 218 / 320 pages </span>
+
+                <span> 68% </span>
+              </div>
+
+              <div class="progress__bar">
+                <div class="progress__value"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STATS -->
+      <section class="stats" id="stats">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Reading statistics</p>
+
+            <h2>See the story behind your reading.</h2>
+          </div>
+
+          <div class="stats__grid">
+            <div class="stat">
+              <strong>12</strong>
+              <span>Books read</span>
+            </div>
+
+            <div class="stat">
+              <strong>3,240</strong>
+              <span>Pages read</span>
+            </div>
+
+            <div class="stat">
+              <strong>4.2</strong>
+              <span>Average rating</span>
+            </div>
+
+            <div class="stat">
+              <strong>20</strong>
+              <span>Yearly goal</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta">
+        <div class="container cta__inner">
+          <p class="eyebrow">Start your next chapter</p>
+
+          <h2>
+            Your reading life,<br />
+            all in one place.
+          </h2>
+
+          <p>Build a personal library that grows with every book you read.</p>
+
+          <a href="#" class="button button--light"> Create your library </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span>BookTrack</span>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
