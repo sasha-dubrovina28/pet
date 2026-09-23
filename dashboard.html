@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>BookTrack Dashboard</title>
+
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <link rel="stylesheet" href="./css/dashboard.css" />
+  </head>
+
+  <body>
+    <section class="dashboard">
+      <div class="container container-dashboard">
+        <!-- HEADER -->
+
+        <header class="dashboard-header">
+          <a href="./index.html" class="logo"> BookTrack </a>
+
+          <nav class="nav">
+            <a href="#"> Search </a>
+
+            <a href="#"> Profile </a>
+          </nav>
+        </header>
+
+        <!-- GREETING -->
+
+        <div class="dashboard-heading">
+          <p class="dashboard-label">Welcome back</p>
+
+          <h1>Hello, Alex</h1>
+        </div>
+
+        <!-- MAIN DASHBOARD -->
+
+        <div class="dashboard-grid">
+          <!-- CURRENT BOOK -->
+
+          <div class="reading-card">
+            <div class="book-cover">
+              <img
+                src="./assets/images/Matt-Haig.jpg"
+                alt="The Midnight Library"
+              />
+            </div>
+
+            <div class="book-content">
+              <span class="reading-card__label"> Currently reading </span>
+
+              <h2>The Midnight Library</h2>
+
+              <p class="book-author">Matt Haig</p>
+
+              <div class="progress-info">
+                <span> 218 / 320 pages </span>
+
+                <strong> 68% </strong>
+              </div>
+
+              <div class="progress-bar">
+                <div class="progress-value"></div>
+              </div>
+
+              <button class="button button--dark">Update progress</button>
+            </div>
+          </div>
+
+          <!-- STATS -->
+
+          <aside class="stats-card">
+            <span class="stats-label"> Reading stats </span>
+
+            <div class="stat">
+              <strong> 12 </strong>
+
+              <p>Books read</p>
+            </div>
+
+            <div class="stat">
+              <strong> 3240 </strong>
+
+              <p>Pages read</p>
+            </div>
+
+            <div class="stat">
+              <strong> 60% </strong>
+
+              <p>Year goal</p>
+            </div>
+          </aside>
+        </div>
+
+        <!-- LIBRARY -->
+
+        <section class="library-preview">
+          <div class="library-header">
+            <h2>Your library</h2>
+
+            <a href="#"> View all </a>
+          </div>
+
+          <div class="books-row">
+            <article class="mini-book">
+              <img src="./assets/images/James-Clear.png" alt="Atomic Habits" />
+            </article>
+
+            <article class="mini-book">
+              <img src="./assets/images/Frank-Herbet.webp" alt="Dune" />
+            </article>
+
+            <article class="mini-book">
+              <img src="./assets/images/Rebecca-Yarros.jpg" alt="Fourth Wing" />
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+  </body>
+</html>
