@@ -1,0 +1,342 @@
+/* ========================================
+   DASHBOARD
+======================================== */
+
+.dashboard {
+    min-height: 100vh;
+    padding: 32px 0 80px;
+    background: var(--color-bg);
+}
+
+.container-dashboard {
+    max-width: 1180px;
+}
+
+
+/* HEADER */
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 14px 24px;
+
+    background: var(--color-bg-light);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+}
+
+.dashboard-header .logo {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.dashboard-header .nav {
+    display: flex;
+    gap: 28px;
+}
+
+.dashboard-header .nav a {
+    font-size: 14px;
+    color: var(--color-text-muted);
+}
+
+
+/* GREETING */
+
+.dashboard-heading {
+    margin: 55px 0 35px;
+}
+
+.dashboard-label {
+    margin-bottom: 10px;
+
+    font-size: 11px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+
+    color: var(--color-text-muted);
+}
+
+.dashboard-heading h1 {
+    margin: 0;
+
+    font-family: var(--font-serif);
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1;
+
+    letter-spacing: -.04em;
+}
+
+
+
+/* GRID */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 24px;
+}
+
+
+
+/* CURRENT BOOK */
+
+.reading-card {
+    display: grid;
+
+    grid-template-columns: 140px 1fr;
+
+    gap: 28px;
+
+    padding: 24px;
+
+    background: var(--color-bg-light);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .04);
+}
+
+
+.book-cover img {
+    width: 100%;
+
+    aspect-ratio: 2/3;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    box-shadow: 0 12px 25px rgba(0, 0, 0, .12);
+}
+
+
+.reading-card__label {
+    font-size: 10px;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+
+    color: var(--color-text-muted);
+}
+
+
+.book-content h2 {
+    margin: 16px 0 8px;
+
+    font-family: var(--font-serif);
+
+    font-size: 36px;
+
+    line-height: 1;
+
+    letter-spacing: -.03em;
+}
+
+
+.book-author {
+    margin-bottom: 30px;
+
+    color: var(--color-text-muted);
+}
+
+
+/* PROGRESS */
+
+.progress-info {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+
+    font-size: 13px;
+}
+
+
+.progress-bar {
+    height: 8px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: rgba(18, 60, 49, .12);
+}
+
+
+.progress-value {
+    width: 68%;
+
+    height: 100%;
+
+    background: var(--color-green);
+
+    border-radius: 20px;
+}
+
+
+.reading-card .button {
+    margin-top: 22px;
+
+    width: auto;
+
+    padding: 12px 24px;
+}
+
+
+
+/* STATS */
+
+.stats-card {
+    padding: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    background: var(--color-green);
+
+    color: white;
+
+    border-radius: var(--radius-lg);
+}
+
+
+.stats-label {
+    font-size: 10px;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+
+    opacity: .65;
+}
+
+
+.stat {
+    margin-top: 20px;
+}
+
+
+.stat strong {
+    display: block;
+
+    font-family: var(--font-serif);
+
+    font-size: 36px;
+
+    line-height: 1;
+}
+
+
+.stat p {
+    margin: 5px 0 0;
+
+    opacity: .7;
+}
+
+
+
+/* LIBRARY */
+
+.library-preview {
+    margin-top: 45px;
+}
+
+
+.library-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+.library-header h2 {
+    margin: 0;
+
+    font-family: var(--font-serif);
+
+    font-size: 32px;
+}
+
+
+.books-row {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+
+.mini-book {
+    overflow: hidden;
+
+    border-radius: var(--radius-md);
+}
+
+
+.mini-book img {
+    width: 100%;
+
+    aspect-ratio: 2/3;
+
+    object-fit: cover;
+
+    transition: transform .3s ease;
+}
+
+
+.mini-book:hover img {
+    transform: scale(1.03);
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px) {
+
+    .dashboard {
+        padding: 20px 0 50px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reading-card {
+        grid-template-columns: 1fr;
+    }
+
+    .book-cover {
+        max-width: 150px;
+    }
+
+    .book-content h2 {
+        font-size: 30px;
+    }
+
+    .books-row {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}

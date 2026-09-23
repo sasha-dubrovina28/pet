@@ -338,24 +338,14 @@ section {
 }
 
 .hero-book__cover {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
     width: min(180px, 65%);
     aspect-ratio: 2 / 3;
 
     margin-inline: auto;
 
-    padding: 22px 18px;
+    overflow: hidden;
 
-    color: #f5f1e8;
-
-    background:
-        radial-gradient(circle at 75% 18%,
-            rgba(255, 255, 255, 0.12),
-            transparent 25%),
-        #163c38;
+    background: #163c38;
 
     border-radius: 4px;
 
@@ -363,32 +353,13 @@ section {
         0 18px 40px rgba(14, 42, 34, 0.2);
 }
 
-.hero-book__cover-small {
-    margin-bottom: 2px;
+.hero-book__cover img {
+    display: block;
 
-    font-family: var(--font-serif);
-    font-size: 15px;
+    width: 100%;
+    height: 100%;
 
-    opacity: 0.8;
-}
-
-.hero-book__cover strong {
-    font-family: var(--font-serif);
-
-    font-size: 29px;
-    font-weight: 500;
-    line-height: 0.95;
-}
-
-.hero-book__cover-author {
-    margin-top: 18px;
-
-    font-size: 10px;
-
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-
-    opacity: 0.6;
+    object-fit: cover;
 }
 
 .hero-book__label {
@@ -605,6 +576,16 @@ section {
         0 14px 30px rgba(0, 0, 0, 0.08);
 }
 
+.book__cover img {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
 .book__cover-content {
     display: flex;
     flex-direction: column;
@@ -733,6 +714,20 @@ section {
         linear-gradient(145deg,
             #ded6c8,
             #bcb4a5);
+}
+
+.reading__visual img {
+    width: min(230px, 75%);
+    aspect-ratio: 2 / 3;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.2);
+
+    transform: rotate(-2deg);
 }
 
 .reading-book {
@@ -1336,7 +1331,6 @@ section {
     }
 
 
-    /* CTA */
 
     .cta h2 {
         font-size: 78px;
@@ -1347,9 +1341,151 @@ section {
     }
 
 
-    /* Footer */
 
     .footer {
         padding-block: 48px;
     }
+}
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+
+/* плавна поява елементів */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Hero текст */
+
+.hero__content {
+    animation: fadeUp 700ms ease forwards;
+}
+
+
+/* Hero книга */
+
+.hero__visual {
+    opacity: 0;
+    animation: fadeUp 700ms ease 150ms forwards;
+}
+
+
+
+/* збільшення книги при наведенні */
+
+.hero__visual img {
+    transition: transform 500ms ease;
+}
+
+
+.hero__visual:hover img {
+    transform: scale(1.03);
+}
+
+
+
+/* картки книг */
+
+.book {
+    transition: transform 300ms ease;
+}
+
+
+.book:hover {
+    transform: translateY(-6px);
+}
+
+
+.book:hover .book__cover {
+    transform: rotate(-1deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+
+
+/* прогрес бар */
+
+.hero-book__progress-value,
+.progress__value {
+
+    animation: progressLoad 1.2s ease forwards;
+    transform-origin: left;
+
+}
+
+
+@keyframes progressLoad {
+
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+
+}
+
+
+
+/* кнопки */
+
+.button {
+
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+.button:active {
+
+    transform: translateY(0);
+
+}
+
+
+
+/* поява секцій при скролі */
+
+.hidden {
+
+    opacity: 0;
+    transform: translateY(40px);
+
+}
+
+
+.show {
+
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+
+section {
+
+    transition:
+        opacity 700ms ease,
+        transform 700ms ease;
+
 }
